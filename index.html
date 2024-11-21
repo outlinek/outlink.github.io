@@ -93,6 +93,64 @@
       background: #0f5c55;
     }
 
+    .features {
+      background-color: #ffffff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .features h2 {
+      margin-bottom: 1rem;
+      color: #47c6bb;
+    }
+
+    .features .feature-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .feature-card {
+      background: #f7f8fa;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1.5rem;
+      width: 250px;
+      margin: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .feature-card i {
+      font-size: 2rem;
+      color: #47c6bb;
+      margin-bottom: 1rem;
+    }
+
+    .testimonials {
+      padding: 2rem 1rem;
+      background: #e8f5e9;
+    }
+
+    .testimonials h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #47c6bb;
+    }
+
+    .testimonial {
+      max-width: 800px;
+      margin: 1rem auto;
+      text-align: center;
+      font-style: italic;
+    }
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -127,7 +185,6 @@
         <input type="number" id="quantity" name="quantity" value="1" min="1" style="width: 50px; padding: 0.5rem; margin-left: 0.5rem;">
       </div>
       <p id="total-price" style="font-size: 1.2rem; color: #0f5c55;">Prezzo totale: 17€</p>
-      <!-- Integrazione PayPal -->
       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" id="paypal-form">
         <input type="hidden" name="cmd" value="_xclick">
         <input type="hidden" name="business" value="IL_TUO_PAYPAL_EMAIL@example.com">
@@ -140,11 +197,43 @@
     </div>
   </div>
 
+  <div class="features">
+    <h2>Perché Sceglierlo?</h2>
+    <div class="feature-list">
+      <div class="feature-card">
+        <i class="fas fa-bolt"></i>
+        <h3>Alta Velocità</h3>
+        <p>Pulisce fino a 10 volte più efficacemente rispetto a uno spazzolino tradizionale.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-leaf"></i>
+        <h3>Eco-Friendly</h3>
+        <p>Batteria ricaricabile e materiali sostenibili per ridurre l'impatto ambientale.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Delicato sulle Gengive</h3>
+        <p>Protegge le gengive mentre rimuove efficacemente la placca.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonials">
+    <h2>Cosa Dicono i Nostri Clienti</h2>
+    <div class="testimonial">
+      <p>"Un prodotto fantastico! I miei denti non sono mai stati così bianchi."</p>
+      <strong>- Marco R.</strong>
+    </div>
+    <div class="testimonial">
+      <p>"Facile da usare e davvero efficace. Consigliatissimo!"</p>
+      <strong>- Lucia T.</strong>
+    </div>
+  </div>
+
   <footer>
     <p>&copy; 2024 Spazzolino Elettrico Premium. <a href="https://www.loloss.com">Visita il nostro sito</a>.</p>
   </footer>
 
-  <!-- JavaScript -->
   <script>
     const quantityInput = document.getElementById("quantity");
     const totalPriceElement = document.getElementById("total-price");
@@ -157,7 +246,6 @@
       const quantity = parseInt(quantityInput.value) || 1;
       const totalPrice = pricePerItem * quantity;
 
-      // Aggiorna il prezzo totale e i campi nascosti per PayPal
       totalPriceElement.textContent = `Prezzo totale: ${totalPrice}€`;
       paypalAmountInput.value = totalPrice;
       paypalQuantityInput.value = quantity;
