@@ -3,94 +3,163 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Acquista il miglior spazzolino elettrico per la tua igiene orale!">
-  <title>Spazzolino Elettrico</title>
+  <meta name="description" content="Acquista il miglior spazzolino elettrico per una pulizia perfetta!">
+  <title>Spazzolino Elettrico Premium</title>
 
-  <!-- Font Google -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font e Icone -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <!-- Stile CSS -->
   <style>
-    body {
-      font-family: 'Roboto', sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background-color: #f4f4f9;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f7f8fa;
       color: #333;
+      line-height: 1.6;
     }
 
     header {
-      background-color: #4caf50;
+      background: linear-gradient(to right, #4caf50, #388e3c);
       color: white;
+      padding: 2rem 0;
       text-align: center;
-      padding: 1rem 0;
     }
 
     header h1 {
       font-size: 2.5rem;
-      margin: 0;
     }
 
-    .container {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+    header p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
     }
 
     .hero {
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      text-align: center;
+      flex-wrap: wrap;
+      padding: 2rem 1rem;
     }
 
     .hero img {
-      max-width: 300px;
-      margin: 1rem;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .hero-text {
       max-width: 500px;
-      margin: 1rem;
+      margin-left: 2rem;
+      text-align: left;
     }
 
     .hero-text h2 {
       font-size: 2rem;
       color: #4caf50;
-      margin-bottom: 1rem;
     }
 
     .hero-text p {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
+      margin: 1rem 0;
+      font-size: 1rem;
     }
 
     .cta-button {
       display: inline-block;
-      padding: 0.8rem 1.5rem;
+      padding: 0.8rem 2rem;
+      background: #4caf50;
+      color: white;
       font-size: 1.2rem;
       font-weight: bold;
-      color: white;
-      background-color: #4caf50;
-      text-decoration: none;
+      border: none;
       border-radius: 5px;
-      transition: background-color 0.3s;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      cursor: pointer;
     }
 
     .cta-button:hover {
-      background-color: #45a049;
+      background: #388e3c;
+    }
+
+    .features {
+      background-color: #ffffff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .features h2 {
+      margin-bottom: 1rem;
+      color: #4caf50;
+    }
+
+    .features .feature-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .feature-card {
+      background: #f7f8fa;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1.5rem;
+      width: 250px;
+      margin: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .feature-card i {
+      font-size: 2rem;
+      color: #4caf50;
+      margin-bottom: 1rem;
+    }
+
+    .feature-card h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .testimonials {
+      padding: 2rem 1rem;
+      background: #e8f5e9;
+    }
+
+    .testimonials h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #4caf50;
+    }
+
+    .testimonial {
+      max-width: 800px;
+      margin: 1rem auto;
+      text-align: center;
+      font-style: italic;
     }
 
     footer {
       text-align: center;
       padding: 1rem;
-      background-color: #333;
+      background: #4caf50;
       color: white;
     }
 
     footer a {
-      color: #4caf50;
+      color: #ffeb3b;
       text-decoration: none;
     }
 
@@ -103,24 +172,53 @@
 
   <header>
     <h1>Spazzolino Elettrico Premium</h1>
+    <p>Il tuo partner ideale per una perfetta igiene orale</p>
   </header>
 
-  <div class="container">
-    <div class="hero">
-      <img src="https://m.media-amazon.com/images/I/515KTe1mEzL._AC_SX522_.jpg" alt="Spazzolino Elettrico">
-      <div class="hero-text">
-        <h2>La Rivoluzione della Tua Igiene Orale</h2>
-        <p>
-          Scopri il miglior spazzolino elettrico progettato per offrire una pulizia profonda ed efficace. 
-          Con la sua tecnologia avanzata, ti garantirà denti più bianchi e una bocca più sana.
-        </p>
-        <a href="https://www.loloss.com" class="cta-button">Acquista Ora</a>
+  <div class="hero">
+    <img src="https://m.media-amazon.com/images/I/515KTe1mEzL._AC_SX522_.jpg" alt="Spazzolino Elettrico">
+    <div class="hero-text">
+      <h2>Migliora la Tua Igiene Orale</h2>
+      <p>Progettato con tecnologia avanzata per offrire una pulizia profonda e delicata. Garantisce denti più bianchi e una bocca sana in pochi utilizzi!</p>
+      <a href="https://www.loloss.com" class="cta-button">Acquista Ora</a>
+    </div>
+  </div>
+
+  <div class="features">
+    <h2>Perché Sceglierlo?</h2>
+    <div class="feature-list">
+      <div class="feature-card">
+        <i class="fas fa-bolt"></i>
+        <h3>Alta Velocità</h3>
+        <p>Pulisce fino a 10 volte più efficacemente rispetto a uno spazzolino tradizionale.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-leaf"></i>
+        <h3>Eco-Friendly</h3>
+        <p>Batteria ricaricabile e materiali sostenibili per ridurre l'impatto ambientale.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Delicato sulle Gengive</h3>
+        <p>Protegge le gengive mentre rimuove efficacemente la placca.</p>
       </div>
     </div>
   </div>
 
+  <div class="testimonials">
+    <h2>Cosa Dicono i Nostri Clienti</h2>
+    <div class="testimonial">
+      <p>"Un prodotto fantastico! I miei denti non sono mai stati così bianchi."</p>
+      <strong>- Marco R.</strong>
+    </div>
+    <div class="testimonial">
+      <p>"Facile da usare e davvero efficace. Consigliatissimo!"</p>
+      <strong>- Lucia T.</strong>
+    </div>
+  </div>
+
   <footer>
-    <p>&copy; 2024 Spazzolino Elettrico. <a href="https://www.loloss.com">Visita il nostro sito</a>.</p>
+    <p>&copy; 2024 Spazzolino Elettrico Premium. <a href="https://www.loloss.com">Visita il nostro sito</a>.</p>
   </footer>
 
 </body>
