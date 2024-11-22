@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Acquista il miglior spazzolino elettrico per un sorriso sano e brillante.">
+  <meta name="description" content="Acquista lo spazzolino elettrico più avanzato per una pulizia perfetta.">
   <title>Spazzolino Elettrico Premium</title>
   
   <!-- Font e Icone -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <!-- Stile CSS -->
@@ -16,8 +16,9 @@
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f9f9f9;
+      background: linear-gradient(135deg, #e3f2fd, #fce4ec);
       color: #333;
+      overflow-x: hidden;
     }
 
     /* Navbar */
@@ -28,10 +29,6 @@
       padding: 1rem 2rem;
       background: #2c3e50;
       color: white;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
     }
 
     .navbar a {
@@ -56,145 +53,78 @@
       align-items: center;
     }
 
-    header {
-      text-align: center;
-      padding: 2rem;
-      background: #2c3e50;
-      color: white;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-    }
-
-    header p {
-      font-size: 1rem;
-      margin-top: 0.5rem;
-    }
-
-    .container {
+    /* Hero Section */
+    .hero {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .image-gallery {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 1rem;
+      justify-content: space-between;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, #001f54, #0056b3);
+      color: white;
+      min-height: 100vh;
     }
 
-    .image-gallery img {
-      max-width: 100px;
-      cursor: pointer;
-      border: 2px solid transparent;
-      border-radius: 10px;
-      transition: border 0.3s ease;
+    .hero .content {
+      max-width: 600px;
     }
 
-    .image-gallery img:hover {
-      border-color: #2c3e50;
-    }
-
-    .main-image {
-      flex: 2;
-      max-width: 300px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .main-image img {
-      max-width: 100%;
-      border-radius: 10px;
-    }
-
-    .product-details {
-      flex: 3;
-      padding: 2rem;
-    }
-
-    .product-details h2 {
-      font-size: 2rem;
+    .hero h1 {
+      font-size: 3rem;
       margin-bottom: 1rem;
-      color: #2c3e50;
+      color: #ffcc00;
     }
 
-    .product-details p {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-      line-height: 1.5;
-      color: #7f8c8d;
-    }
-
-    .price {
+    .hero h2 {
       font-size: 1.5rem;
-      color: #e74c3c;
       margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      color: #ddd;
+    }
+
+    .hero .price {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      color: #ffcc00;
     }
 
     .cta-button {
       display: inline-block;
-      background: #e74c3c;
-      color: white;
+      background: #ffcc00;
+      color: #001f54;
       padding: 1rem 2rem;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 1rem;
+      font-size: 1.2rem;
       font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
       cursor: pointer;
       transition: background 0.3s ease;
     }
 
     .cta-button:hover {
-      background: #c0392b;
+      background: #ffc107;
     }
 
-    .features {
+    .hero .product-image {
+      flex: 1;
       text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 2rem;
     }
 
-    .features h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      color: #2c3e50;
+    .hero .product-image img {
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
 
-    .feature-icons {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-    }
-
-    .feature {
-      text-align: center;
-      max-width: 150px;
-    }
-
-    .feature i {
-      font-size: 2rem;
-      color: #2c3e50;
-      margin-bottom: 0.5rem;
-    }
-
-    .feature p {
-      font-size: 0.9rem;
-      color: #7f8c8d;
-    }
-
+    /* Footer */
     footer {
       text-align: center;
       padding: 1rem;
-      background: #2c3e50;
+      background: #001f54;
       color: white;
     }
 
@@ -207,60 +137,32 @@
 <body>
   <!-- Navbar -->
   <div class="navbar">
-    <div class="logo">Premium Brush</div>
+    <div class="logo">Spazzolino Premium</div>
     <div class="menu">
       <a href="#">Home</a>
-      <a href="#about">About Us</a>
+      <a href="#">Prodotti</a>
+      <a href="#">About Us</a>
+      <a href="#">Contatti</a>
     </div>
   </div>
 
-  <header>
-    <h1>Spazzolino Elettrico Premium</h1>
-    <p>Il tuo alleato per una pulizia profonda</p>
-  </header>
-
-  <div class="container">
-    <!-- Galleria Immagini -->
-    <div class="image-gallery">
-      <img src="https://m.media-amazon.com/images/I/515KTe1mEzL._AC_SX522_.jpg" alt="Immagine 1">
-      <img src="https://via.placeholder.com/100" alt="Immagine 2">
-      <img src="https://via.placeholder.com/100" alt="Immagine 3">
-    </div>
-
-    <!-- Immagine Principale -->
-    <div class="main-image">
-      <img src="https://m.media-amazon.com/images/I/515KTe1mEzL._AC_SX522_.jpg" alt="Spazzolino">
-    </div>
-
-    <!-- Dettagli Prodotto -->
-    <div class="product-details">
-      <h2>Spazzolino Elettrico Premium</h2>
-      <p>Un design moderno con tecnologia avanzata per una pulizia profonda e gengive protette.</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="content">
+      <h1>Spazzolino Elettrico Premium</h1>
+      <h2>Per una pulizia profonda e gengive protette</h2>
+      <p>Progettato con tecnologia avanzata, il nostro spazzolino garantisce una pulizia perfetta e denti sani. Scopri il futuro della tua igiene orale.</p>
       <p class="price">€17</p>
       <a href="https://www.paypal.com/cgi-bin/webscr" class="cta-button">Acquista Ora</a>
     </div>
-  </div>
-
-  <section class="features">
-    <h2>Caratteristiche Principali</h2>
-    <div class="feature-icons">
-      <div class="feature">
-        <i class="fas fa-bolt"></i>
-        <p>Alta velocità per una pulizia profonda</p>
-      </div>
-      <div class="feature">
-        <i class="fas fa-leaf"></i>
-        <p>Eco-friendly con materiali sostenibili</p>
-      </div>
-      <div class="feature">
-        <i class="fas fa-shield-alt"></i>
-        <p>Protegge le gengive</p>
-      </div>
+    <div class="product-image">
+      <img src="https://png.pngtree.com/png-clipart/20240926/original/pngtree-3d-electric-toothbrush-with-glass-charger-generic-png-image_16098336.png" alt="Spazzolino Elettrico">
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2024 Spazzolino Elettrico Premium. <a href="#">Privacy</a> | <a href="#">Termini</a></p>
+    <p>&copy; 2024 Spazzolino Elettrico Premium. <a href="#">Privacy</a> | <a href="#">Contatti</a></p>
   </footer>
 </body>
 </html>
