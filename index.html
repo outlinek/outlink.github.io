@@ -3,24 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Visualizza il tuo spazzolino elettrico in 3D e ruotalo a 360°!">
-  <title>Spazzolino Elettrico Premium - 3D Viewer</title>
+  <meta name="description" content="Acquista il miglior spazzolino elettrico per un sorriso sano e brillante.">
+  <title>Spazzolino Elettrico Premium</title>
   
-  <!-- Font e Stili -->
+  <!-- Font e Icone -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Stile CSS -->
   <style>
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #e3f2fd, #fce4ec);
+      background: #f9f9f9;
       color: #333;
     }
 
     header {
       text-align: center;
       padding: 2rem;
-      background: #0056b3;
+      background: #2c3e50;
       color: white;
     }
 
@@ -29,26 +32,133 @@
     }
 
     header p {
-      font-size: 1.2rem;
+      font-size: 1rem;
+      margin-top: 0.5rem;
     }
 
-    .viewer-container {
-      max-width: 600px;
-      margin: 2rem auto;
-      text-align: center;
-      position: relative;
-    }
-
-    .viewer-container canvas {
-      max-width: 100%;
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .image-gallery {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .image-gallery img {
+      max-width: 100px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      transition: border 0.3s ease;
+    }
+
+    .image-gallery img:hover {
+      border-color: #2c3e50;
+    }
+
+    .main-image {
+      flex: 2;
+      max-width: 300px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .main-image img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .product-details {
+      flex: 3;
+      padding: 2rem;
+    }
+
+    .product-details h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    .product-details p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+      color: #7f8c8d;
+    }
+
+    .price {
+      font-size: 1.5rem;
+      color: #e74c3c;
+      margin-bottom: 1rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #e74c3c;
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: #c0392b;
+    }
+
+    .features {
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 2rem;
+    }
+
+    .features h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    .feature-icons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .feature {
+      text-align: center;
+      max-width: 150px;
+    }
+
+    .feature i {
+      font-size: 2rem;
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature p {
+      font-size: 0.9rem;
+      color: #7f8c8d;
     }
 
     footer {
       text-align: center;
       padding: 1rem;
-      background: #0056b3;
+      background: #2c3e50;
       color: white;
     }
 
@@ -61,75 +171,51 @@
 <body>
   <header>
     <h1>Spazzolino Elettrico Premium</h1>
-    <p>Visualizza il tuo prodotto in 3D</p>
+    <p>Il tuo alleato per una pulizia profonda</p>
   </header>
 
-  <div class="viewer-container">
-    <canvas id="viewer" width="600" height="400"></canvas>
+  <div class="container">
+    <!-- Galleria Immagini -->
+    <div class="image-gallery">
+      <img src="https://m.media-amazon.com/images/I/515KTe1mEzL._AC_SX522_.jpg" alt="Immagine 1">
+      <img src="https://via.placeholder.com/100" alt="Immagine 2">
+      <img src="https://via.placeholder.com/100" alt="Immagine 3">
+    </div>
+
+    <!-- Immagine Principale -->
+    <div class="main-image">
+      <img src="https://m.media-amazon.com/images/I/515KTe1mEzL._AC_SX522_.jpg" alt="Spazzolino">
+    </div>
+
+    <!-- Dettagli Prodotto -->
+    <div class="product-details">
+      <h2>Spazzolino Elettrico Premium</h2>
+      <p>Un design moderno con tecnologia avanzata per una pulizia profonda e gengive protette.</p>
+      <p class="price">€17</p>
+      <a href="https://www.paypal.com/cgi-bin/webscr" class="cta-button">Acquista Ora</a>
+    </div>
   </div>
 
+  <section class="features">
+    <h2>Caratteristiche Principali</h2>
+    <div class="feature-icons">
+      <div class="feature">
+        <i class="fas fa-bolt"></i>
+        <p>Alta velocità per una pulizia profonda</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-leaf"></i>
+        <p>Eco-friendly con materiali sostenibili</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-shield-alt"></i>
+        <p>Protegge le gengive</p>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <p>&copy; 2024 Spazzolino Elettrico Premium. <a href="#">Privacy</a> | <a href="#">Contatti</a></p>
+    <p>&copy; 2024 Spazzolino Elettrico Premium. <a href="#">Privacy</a> | <a href="#">Termini</a></p>
   </footer>
-
-  <!-- Script per Rotazione 360° -->
-  <script>
-    const canvas = document.getElementById('viewer');
-    const ctx = canvas.getContext('2d');
-
-    // Lista delle immagini del prodotto
-    const images = [];
-    for (let i = 1; i <= 36; i++) {
-      const img = new Image();
-      img.src = `images/product_${i}.jpg`; // Assicurati che le immagini siano numerate: product_1.jpg, product_2.jpg, ecc.
-      images.push(img);
-    }
-
-    let currentFrame = 0;
-    let isDragging = false;
-    let startX;
-
-    function drawImage() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      const img = images[currentFrame];
-      if (img.complete) {
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-      } else {
-        img.onload = () => {
-          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-        };
-      }
-    }
-
-    canvas.addEventListener('mousedown', (e) => {
-      isDragging = true;
-      startX = e.clientX;
-    });
-
-    canvas.addEventListener('mousemove', (e) => {
-      if (isDragging) {
-        const dx = e.clientX - startX;
-        if (dx > 5) {
-          currentFrame = (currentFrame + 1) % images.length;
-          startX = e.clientX;
-        } else if (dx < -5) {
-          currentFrame = (currentFrame - 1 + images.length) % images.length;
-          startX = e.clientX;
-        }
-        drawImage();
-      }
-    });
-
-    canvas.addEventListener('mouseup', () => {
-      isDragging = false;
-    });
-
-    canvas.addEventListener('mouseleave', () => {
-      isDragging = false;
-    });
-
-    // Disegna il primo frame all'avvio
-    images[0].onload = drawImage;
-  </script>
 </body>
 </html>
