@@ -20,6 +20,42 @@
       color: #333;
     }
 
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #2c3e50;
+      color: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #ffcc00;
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .navbar .menu {
+      display: flex;
+      align-items: center;
+    }
+
     header {
       text-align: center;
       padding: 2rem;
@@ -169,6 +205,15 @@
   </style>
 </head>
 <body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">Premium Brush</div>
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#about">About Us</a>
+    </div>
+  </div>
+
   <header>
     <h1>Spazzolino Elettrico Premium</h1>
     <p>Il tuo alleato per una pulizia profonda</p>
