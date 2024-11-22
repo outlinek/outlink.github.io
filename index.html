@@ -15,208 +15,219 @@
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f9fafa;
+      background: #f7f7f7;
+      color: #333;
     }
 
     header {
-      background: linear-gradient(to right, #ff5f6d, #ffc371);
-      padding: 2rem;
-      text-align: center;
+      background: linear-gradient(to right, #ff7f50, #ff4500);
       color: white;
+      text-align: center;
+      padding: 2rem 1rem;
     }
 
     header h1 {
       font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
 
     header p {
       font-size: 1.2rem;
-      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
     }
 
-    .timer {
-      font-size: 1.2rem;
-      background: #ffdddd;
-      padding: 1rem;
-      margin: 1rem auto;
+    .cta-banner {
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      text-align: center;
       border-radius: 10px;
-      width: fit-content;
+      margin: -2rem auto 2rem;
+      max-width: 800px;
+    }
+
+    .cta-banner p {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .cta-banner span {
+      color: #ff4500;
+      font-size: 1.5rem;
     }
 
     .hero {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-      background: #fff3e0;
+      text-align: center;
+      padding: 2rem 1rem;
+      background: white;
     }
 
     .hero img {
       max-width: 350px;
-      border-radius: 10px;
-      margin: 1rem;
+      border-radius: 15px;
+      margin: 1rem 0;
     }
 
-    .hero-content {
-      max-width: 500px;
-      text-align: center;
-    }
-
-    .hero-content h2 {
+    .hero h2 {
       font-size: 2rem;
-      color: #ff5f6d;
+      color: #ff4500;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
     }
 
     .cta-button {
-      display: inline-block;
-      padding: 1rem 2rem;
-      background: #ff5f6d;
+      background: #ff4500;
       color: white;
-      text-decoration: none;
-      border-radius: 10px;
+      padding: 1rem 2rem;
       font-size: 1.2rem;
       font-weight: bold;
-      margin-top: 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
       transition: all 0.3s ease;
     }
 
     .cta-button:hover {
-      background: #ffc371;
-      transform: translateY(-3px);
-    }
-
-    .quantity {
-      margin: 1rem auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .quantity label {
-      margin-right: 10px;
+      background: #ff7f50;
     }
 
     .features {
-      background: #fff;
-      padding: 2rem;
+      background: #f9f9f9;
+      padding: 2rem 1rem;
+      text-align: center;
     }
 
     .features h2 {
-      text-align: center;
+      font-size: 1.8rem;
       margin-bottom: 1rem;
-      color: #ff5f6d;
+      color: #ff4500;
     }
 
-    .feature-card {
-      text-align: center;
-      padding: 1rem;
+    .feature-list {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .feature {
+      max-width: 200px;
       margin: 1rem;
+      text-align: center;
+    }
+
+    .feature i {
+      font-size: 2rem;
+      color: #ff4500;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature p {
+      font-size: 1rem;
     }
 
     .testimonials {
-      background: #ffede0;
-      padding: 2rem;
+      background: #fff3e0;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .testimonials h2 {
+      color: #ff4500;
+      margin-bottom: 1.5rem;
     }
 
     .testimonial {
-      max-width: 500px;
-      margin: 0 auto;
-      text-align: center;
+      max-width: 400px;
+      margin: 1rem auto;
+      font-style: italic;
     }
 
     footer {
-      background: #ff5f6d;
+      text-align: center;
+      background: #333;
       color: white;
       padding: 1rem;
-      text-align: center;
+    }
+
+    footer a {
+      color: #ff4500;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Spazzolino Elettrico Premium</h1>
-    <p>Acquista oggi e ottieni il 20% di sconto!</p>
-    <div class="timer">
-      Offerta valida solo per altre: <span id="countdown"></span>
-    </div>
+    <p>Un sorriso più bianco è a un clic di distanza!</p>
   </header>
+
+  <div class="cta-banner">
+    <p>Offerta valida per <span id="countdown">1:00:00</span> - Acquista ora e risparmia!</p>
+  </div>
 
   <section class="hero">
     <img src="https://m.media-amazon.com/images/I/515KTe1mEzL._AC_SX522_.jpg" alt="Spazzolino Elettrico Premium">
-    <div class="hero-content">
-      <h2>Un Sorriso Perfetto, Ogni Giorno</h2>
-      <p>Progettato per denti sani e gengive delicate. La soluzione ideale per un'igiene orale professionale.</p>
-      
-      <div class="quantity">
-        <label for="quantity">Quantità:</label>
-        <input type="number" id="quantity" value="1" min="1" style="width: 50px;">
-      </div>
-      <p id="price" style="font-size: 1.2rem; font-weight: bold; color: #ff5f6d;">Prezzo totale: €17</p>
-      
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" id="paypal-form">
-        <input type="hidden" name="cmd" value="_xclick">
-        <input type="hidden" name="business" value="IL_TUO_PAYPAL_EMAIL@example.com">
-        <input type="hidden" name="item_name" value="Spazzolino Elettrico Premium">
-        <input type="hidden" name="currency_code" value="EUR">
-        <input type="hidden" name="amount" value="17" id="paypal-amount">
-        <input type="hidden" name="quantity" value="1" id="paypal-quantity">
-        <button type="submit" class="cta-button">Acquista Ora</button>
-      </form>
-    </div>
+    <h2>Il tuo sorriso merita il meglio</h2>
+    <p>Progettato con tecnologia avanzata per garantire una pulizia profonda e gengive sane. Il tuo alleato per un'igiene orale perfetta!</p>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+      <input type="hidden" name="cmd" value="_xclick">
+      <input type="hidden" name="business" value="IL_TUO_PAYPAL_EMAIL@example.com">
+      <input type="hidden" name="item_name" value="Spazzolino Elettrico Premium">
+      <input type="hidden" name="currency_code" value="EUR">
+      <input type="hidden" name="amount" value="17">
+      <button type="submit" class="cta-button">Acquista Ora - €17</button>
+    </form>
   </section>
 
   <section class="features">
-    <h2>Perché scegliere il nostro prodotto?</h2>
-    <div class="feature-card">
-      <h3>Alta Tecnologia</h3>
-      <p>Pulisce fino a 10 volte più efficacemente.</p>
-    </div>
-    <div class="feature-card">
-      <h3>Rispetto per l'Ambiente</h3>
-      <p>Materiali eco-sostenibili e batteria ricaricabile.</p>
+    <h2>Perché scegliere il nostro spazzolino?</h2>
+    <div class="feature-list">
+      <div class="feature">
+        <i class="fas fa-bolt"></i>
+        <p>Alta velocità per una pulizia profonda</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-leaf"></i>
+        <p>Materiali eco-sostenibili</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-shield-alt"></i>
+        <p>Protezione per le gengive</p>
+      </div>
     </div>
   </section>
 
   <section class="testimonials">
-    <h2>Cosa dicono i clienti:</h2>
+    <h2>Cosa dicono i nostri clienti</h2>
     <div class="testimonial">
-      <p>"Un prodotto fantastico! Mai avuto denti così bianchi."</p>
+      <p>"Mai avuto denti così bianchi e puliti. Lo consiglio a tutti!"</p>
       <strong>- Marco R.</strong>
+    </div>
+    <div class="testimonial">
+      <p>"Facile da usare e molto efficace. Fantastico!"</p>
+      <strong>- Sara T.</strong>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2024 Spazzolino Elettrico Premium. Tutti i diritti riservati.</p>
+    <p>&copy; 2024 Spazzolino Elettrico Premium. <a href="#">Privacy</a> | <a href="#">Termini</a></p>
   </footer>
 
   <script>
     const countdownElement = document.getElementById('countdown');
-    const quantityInput = document.getElementById('quantity');
-    const priceElement = document.getElementById('price');
-    const paypalAmountInput = document.getElementById('paypal-amount');
-    const paypalQuantityInput = document.getElementById('paypal-quantity');
+    let time = 3600; // 1 ora in secondi
 
-    let timeLeft = 3600; // 1 ora in secondi
     setInterval(() => {
-      if (timeLeft <= 0) {
-        countdownElement.textContent = 'Scaduta!';
-      } else {
-        const minutes = Math.floor(timeLeft / 60);
-        const seconds = timeLeft % 60;
-        countdownElement.textContent = `${minutes}m ${seconds}s`;
-        timeLeft--;
-      }
+      const minutes = Math.floor(time / 60);
+      const seconds = time % 60;
+      countdownElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+      if (time > 0) time--;
     }, 1000);
-
-    quantityInput.addEventListener('input', () => {
-      const quantity = parseInt(quantityInput.value) || 1;
-      const price = 17 * quantity;
-      priceElement.textContent = `Prezzo totale: €${price}`;
-      paypalAmountInput.value = price;
-      paypalQuantityInput.value = quantity;
-    });
   </script>
 </body>
 </html>
