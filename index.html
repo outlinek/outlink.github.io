@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Acquista il miglior spazzolino elettrico per una pulizia perfetta!">
-  <title>Spazzolino Elettrico Premium</title>
-
+  <meta name="description" content="Acquista il miglior spazzolino elettrico per una pulizia profonda e denti sani. Offerta limitata!">
+  <meta name="keywords" content="spazzolino elettrico, igiene orale, denti sani, tecnologia avanzata">
+  <meta name="author" content="Spazzolino Elettrico Premium">
+  <title>Spazzolino Elettrico Premium - Acquista Ora</title>
+  
   <!-- Font e Icone -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <!-- Stile CSS -->
   <style>
+    /* Stile Globale */
     * {
       margin: 0;
       padding: 0;
@@ -20,141 +23,160 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #f7f8fa;
+      background-color: #f9fafa;
       color: #333;
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
+    /* Header */
     header {
-      background: linear-gradient(to right, #47c6bb, #0f5c55);
+      background: linear-gradient(to right, #00b09b, #96c93d);
       color: white;
-      padding: 2rem 0;
       text-align: center;
+      padding: 2.5rem 1rem;
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
+      margin-bottom: 1rem;
     }
 
     header p {
-      margin-top: 1rem;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
     }
 
+    /* Sezione Hero */
     .hero {
       display: flex;
-      align-items: center;
-      justify-content: center;
       flex-wrap: wrap;
-      padding: 2rem 1rem;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem 1rem;
     }
 
     .hero img {
       max-width: 400px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      margin: 1rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
     .hero-text {
       max-width: 500px;
-      margin-left: 2rem;
-      text-align: left;
+      margin: 1rem;
+      text-align: center;
     }
 
     .hero-text h2 {
-      font-size: 2rem;
-      color: #47c6bb;
+      font-size: 2.5rem;
+      color: #00b09b;
+      margin-bottom: 1rem;
     }
 
     .hero-text p {
-      margin: 1rem 0;
-      font-size: 1rem;
-    }
-
-    .quantity {
-      margin: 1rem 0;
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
     }
 
     .cta-button {
       display: inline-block;
-      padding: 0.8rem 2rem;
-      background: #47c6bb;
-      color: white;
+      padding: 1rem 2rem;
       font-size: 1.2rem;
       font-weight: bold;
+      color: white;
+      background: #00b09b;
       border: none;
-      border-radius: 5px;
+      border-radius: 10px;
       text-decoration: none;
-      transition: background 0.3s ease;
       cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
     }
 
     .cta-button:hover {
-      background: #0f5c55;
+      background: #96c93d;
+      transform: translateY(-3px);
     }
 
+    /* Features */
     .features {
-      background-color: #ffffff;
-      padding: 2rem 1rem;
+      padding: 3rem 1rem;
       text-align: center;
     }
 
     .features h2 {
-      margin-bottom: 1rem;
-      color: #47c6bb;
+      font-size: 2rem;
+      color: #00b09b;
+      margin-bottom: 2rem;
     }
 
-    .features .feature-list {
+    .feature-list {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: center;
     }
 
     .feature-card {
-      background: #f7f8fa;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 1.5rem;
-      width: 250px;
+      width: 280px;
       margin: 1rem;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      border-radius: 10px;
+      background: white;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .feature-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
 
     .feature-card i {
       font-size: 2rem;
-      color: #47c6bb;
+      color: #00b09b;
       margin-bottom: 1rem;
     }
 
+    .feature-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-card p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    /* Testimonianze */
     .testimonials {
-      padding: 2rem 1rem;
-      background: #e8f5e9;
+      background: #f3fef3;
+      padding: 3rem 1rem;
     }
 
     .testimonials h2 {
-      text-align: center;
-      margin-bottom: 1rem;
-      color: #47c6bb;
+      color: #00b09b;
+      margin-bottom: 2rem;
     }
 
     .testimonial {
-      max-width: 800px;
-      margin: 1rem auto;
+      max-width: 700px;
+      margin: 1.5rem auto;
       text-align: center;
       font-style: italic;
+      color: #555;
     }
 
+    .testimonial strong {
+      display: block;
+      margin-top: 1rem;
+      color: #333;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
       padding: 1rem;
-      background: #47c6bb;
+      background: #00b09b;
       color: white;
     }
 
@@ -170,87 +192,46 @@
 </head>
 <body>
 
+  <!-- Contenuto -->
   <header>
     <h1>Spazzolino Elettrico Premium</h1>
-    <p>Il tuo partner ideale per una perfetta igiene orale</p>
+    <p>Un sorriso più bianco è a un clic di distanza!</p>
   </header>
 
   <div class="hero">
-    <img src="https://m.media-amazon.com/images/I/515KTe1mEzL._AC_SX522_.jpg" alt="Spazzolino Elettrico">
+    <img src="https://m.media-amazon.com/images/I/515KTe1mEzL._AC_SX522_.jpg" alt="Immagine Spazzolino">
     <div class="hero-text">
-      <h2>Migliora la Tua Igiene Orale</h2>
-      <p>Progettato con tecnologia avanzata per offrire una pulizia profonda e delicata. Garantisce denti più bianchi e una bocca sana in pochi utilizzi!</p>
-      <div class="quantity">
-        <label for="quantity">Quantità:</label>
-        <input type="number" id="quantity" name="quantity" value="1" min="1" style="width: 50px; padding: 0.5rem; margin-left: 0.5rem;">
-      </div>
-      <p id="total-price" style="font-size: 1.2rem; color: #0f5c55;">Prezzo totale: 17€</p>
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" id="paypal-form">
-        <input type="hidden" name="cmd" value="_xclick">
-        <input type="hidden" name="business" value="IL_TUO_PAYPAL_EMAIL@example.com">
-        <input type="hidden" name="item_name" value="Spazzolino Elettrico Premium">
-        <input type="hidden" name="currency_code" value="EUR">
-        <input type="hidden" name="amount" value="17" id="paypal-amount">
-        <input type="hidden" name="quantity" value="1" id="paypal-quantity">
-        <button type="submit" class="cta-button">Acquista Ora</button>
-      </form>
+      <h2>Igiene Orale Perfetta</h2>
+      <p>Pulisci i tuoi denti come un professionista con il nostro spazzolino elettrico di alta qualità.</p>
+      <a href="#paypal-form" class="cta-button">Acquista Ora</a>
     </div>
   </div>
 
+  <!-- Sezione Migliorata -->
   <div class="features">
-    <h2>Perché Sceglierlo?</h2>
+    <h2>Vantaggi Principali</h2>
     <div class="feature-list">
       <div class="feature-card">
         <i class="fas fa-bolt"></i>
-        <h3>Alta Velocità</h3>
-        <p>Pulisce fino a 10 volte più efficacemente rispetto a uno spazzolino tradizionale.</p>
+        <h3>Alta Tecnologia</h3>
+        <p>Pulisce fino a 10 volte meglio rispetto ai metodi tradizionali.</p>
       </div>
       <div class="feature-card">
         <i class="fas fa-leaf"></i>
         <h3>Eco-Friendly</h3>
-        <p>Batteria ricaricabile e materiali sostenibili per ridurre l'impatto ambientale.</p>
+        <p>Materiali sostenibili e batteria ricaricabile.</p>
       </div>
       <div class="feature-card">
         <i class="fas fa-shield-alt"></i>
-        <h3>Delicato sulle Gengive</h3>
-        <p>Protegge le gengive mentre rimuove efficacemente la placca.</p>
+        <h3>Sicurezza</h3>
+        <p>Protegge le gengive e previene irritazioni.</p>
       </div>
-    </div>
-  </div>
-
-  <div class="testimonials">
-    <h2>Cosa Dicono i Nostri Clienti</h2>
-    <div class="testimonial">
-      <p>"Un prodotto fantastico! I miei denti non sono mai stati così bianchi."</p>
-      <strong>- Marco R.</strong>
-    </div>
-    <div class="testimonial">
-      <p>"Facile da usare e davvero efficace. Consigliatissimo!"</p>
-      <strong>- Lucia T.</strong>
     </div>
   </div>
 
   <footer>
-    <p>&copy; 2024 Spazzolino Elettrico Premium. <a href="https://www.loloss.com">Visita il nostro sito</a>.</p>
+    <p>&copy; 2024 Spazzolino Elettrico Premium. <a href="#">Tutti i diritti riservati.</a></p>
   </footer>
-
-  <script>
-    const quantityInput = document.getElementById("quantity");
-    const totalPriceElement = document.getElementById("total-price");
-    const paypalAmountInput = document.getElementById("paypal-amount");
-    const paypalQuantityInput = document.getElementById("paypal-quantity");
-
-    const pricePerItem = 17; // Prezzo unitario
-
-    quantityInput.addEventListener("input", () => {
-      const quantity = parseInt(quantityInput.value) || 1;
-      const totalPrice = pricePerItem * quantity;
-
-      totalPriceElement.textContent = `Prezzo totale: ${totalPrice}€`;
-      paypalAmountInput.value = totalPrice;
-      paypalQuantityInput.value = quantity;
-    });
-  </script>
 
 </body>
 </html>
