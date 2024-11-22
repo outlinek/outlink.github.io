@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Acquista il miglior spazzolino elettrico e ottieni denti sani e un sorriso brillante! Offerta limitata.">
-  <title>Spazzolino Elettrico Premium - Offerta Limitata</title>
+  <meta name="description" content="Acquista il miglior spazzolino elettrico per un sorriso sano e splendente.">
+  <title>Spazzolino Elettrico Premium</title>
   
   <!-- Font e Icone -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -15,160 +15,115 @@
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
-      background: #f9f9f9;
+      padding: 0;
+      background: linear-gradient(135deg, #e3f2fd, #fce4ec);
       color: #333;
     }
 
     header {
-      background: linear-gradient(to right, #001f54, #0056b3);
-      color: white;
       text-align: center;
       padding: 2rem 1rem;
     }
 
     header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
     }
 
     header p {
       font-size: 1.2rem;
+      color: #7f8c8d;
     }
 
-    .hero {
-      text-align: center;
+    .product-showcase {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       padding: 2rem;
-      background: #eef7ff;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    .hero img {
-      max-width: 600px;
-      margin: 1rem auto;
-      display: block;
+    .product-details {
+      flex: 1;
+      padding: 2rem;
     }
 
-    .hero h2 {
+    .product-details h2 {
       font-size: 2rem;
-      margin: 1rem 0;
-      color: #0056b3;
+      color: #2c3e50;
+      margin-bottom: 1rem;
     }
 
-    .categories {
+    .product-details p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #7f8c8d;
+      margin-bottom: 1.5rem;
+    }
+
+    .product-details .price {
+      font-size: 1.8rem;
+      color: #e74c3c;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: #e74c3c;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: #c0392b;
+    }
+
+    .product-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .product-image img {
+      max-width: 400px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .social-icons {
       display: flex;
       justify-content: center;
       gap: 1rem;
-      margin: 2rem auto;
-      padding: 1rem;
+      margin-top: 2rem;
     }
 
-    .category {
-      text-align: center;
-      flex: 1;
-      max-width: 150px;
+    .social-icons a {
+      color: #2c3e50;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
     }
 
-    .category img {
-      max-width: 100%;
-      border-radius: 10px;
-    }
-
-    .category p {
-      margin-top: 0.5rem;
-      font-weight: bold;
-    }
-
-    .promo {
-      background: #0056b3;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-      margin: 2rem 0;
-    }
-
-    .promo h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-
-    .promo a {
-      background: #ffcc00;
-      color: #0056b3;
-      padding: 0.8rem 1.5rem;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    .best-sellers {
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .best-sellers h2 {
-      font-size: 1.8rem;
-      color: #0056b3;
-      margin-bottom: 1rem;
-    }
-
-    .product-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-    }
-
-    .product {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 1rem;
-      max-width: 200px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .product img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-bottom: 0.5rem;
-    }
-
-    .product h3 {
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .product p {
-      font-size: 1rem;
-      color: #0056b3;
-      margin-bottom: 1rem;
-    }
-
-    .product .stars {
-      color: #ffcc00;
-      margin-bottom: 1rem;
-    }
-
-    .product a {
-      display: inline-block;
-      background: #0056b3;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 0.9rem;
+    .social-icons a:hover {
+      color: #e74c3c;
     }
 
     footer {
-      background: #001f54;
-      color: white;
       text-align: center;
       padding: 1rem;
+      background: #2c3e50;
+      color: white;
     }
 
     footer a {
-      color: #ffcc00;
+      color: #e74c3c;
       text-decoration: none;
     }
   </style>
@@ -176,56 +131,29 @@
 <body>
   <header>
     <h1>Spazzolino Elettrico Premium</h1>
-    <p>Il futuro della tua igiene orale inizia qui</p>
+    <p>Una rivoluzione per la tua igiene orale</p>
   </header>
 
-  <section class="hero">
-    <img src="https://m.media-amazon.com/images/I/515KTe1mEzL._AC_SX522_.jpg" alt="Spazzolino Elettrico">
-    <h2>Una Rivoluzione per il tuo Sorriso</h2>
-  </section>
-
-  <section class="categories">
-    <div class="category">
-      <img src="https://via.placeholder.com/150" alt="Spazzolini">
-      <p>Spazzolini</p>
+  <section class="product-showcase">
+    <div class="product-details">
+      <h2>Il tuo alleato per un sorriso sano</h2>
+      <p>Progettato con tecnologia avanzata per garantire una pulizia profonda e gengive protette. Un dispositivo indispensabile per la tua igiene orale quotidiana.</p>
+      <p class="price">€17</p>
+      <a href="https://www.paypal.com/cgi-bin/webscr" class="cta-button">Acquista Ora</a>
     </div>
-    <div class="category">
-      <img src="https://via.placeholder.com/150" alt="Testine di Ricambio">
-      <p>Testine</p>
-    </div>
-    <div class="category">
-      <img src="https://via.placeholder.com/150" alt="Manuali">
-      <p>Manuali</p>
+    <div class="product-image">
+      <img src="https://m.media-amazon.com/images/I/515KTe1mEzL._AC_SX522_.jpg" alt="Spazzolino Elettrico Premium">
     </div>
   </section>
 
-  <section class="promo">
-    <h2>Solo il Meglio per il Tuo Igiene Orale</h2>
-    <a href="#">Scopri di più</a>
-  </section>
-
-  <section class="best-sellers">
-    <h2>I Nostri Best Sellers</h2>
-    <div class="product-list">
-      <div class="product">
-        <img src="https://via.placeholder.com/200" alt="Prodotto">
-        <h3>Prodotto 1</h3>
-        <p>€49.99</p>
-        <div class="stars">★★★★★</div>
-        <a href="#">Acquista Ora</a>
-      </div>
-      <div class="product">
-        <img src="https://via.placeholder.com/200" alt="Prodotto">
-        <h3>Prodotto 2</h3>
-        <p>€59.99</p>
-        <div class="stars">★★★★☆</div>
-        <a href="#">Acquista Ora</a>
-      </div>
-    </div>
-  </section>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
 
   <footer>
-    <p>&copy; 2024 Spazzolino Elettrico Premium. <a href="#">Privacy</a> | <a href="#">Contatti</a></p>
+    <p>&copy; 2024 Spazzolino Elettrico Premium. <a href="#">Termini e condizioni</a></p>
   </footer>
 </body>
 </html>
