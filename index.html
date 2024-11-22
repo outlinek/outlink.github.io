@@ -3,14 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Acquista il miglior spazzolino elettrico per un sorriso sano e splendente.">
-  <title>Spazzolino Elettrico Premium</title>
+  <meta name="description" content="Visualizza il tuo spazzolino elettrico in 3D e ruotalo a 360°!">
+  <title>Spazzolino Elettrico Premium - 3D Viewer</title>
   
-  <!-- Font e Icone -->
+  <!-- Font e Stili -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-  <!-- Stile CSS -->
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -22,108 +19,41 @@
 
     header {
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 2rem;
+      background: #0056b3;
+      color: white;
     }
 
     header h1 {
       font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #2c3e50;
     }
 
     header p {
       font-size: 1.2rem;
-      color: #7f8c8d;
     }
 
-    .product-showcase {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .product-details {
-      flex: 1;
-      padding: 2rem;
-    }
-
-    .product-details h2 {
-      font-size: 2rem;
-      color: #2c3e50;
-      margin-bottom: 1rem;
-    }
-
-    .product-details p {
-      font-size: 1rem;
-      line-height: 1.5;
-      color: #7f8c8d;
-      margin-bottom: 1.5rem;
-    }
-
-    .product-details .price {
-      font-size: 1.8rem;
-      color: #e74c3c;
-      margin-bottom: 1.5rem;
-    }
-
-    .cta-button {
-      display: inline-block;
-      padding: 1rem 2rem;
-      background: #e74c3c;
-      color: white;
-      font-size: 1.2rem;
-      font-weight: bold;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background: #c0392b;
-    }
-
-    .product-image {
-      flex: 1;
+    .viewer-container {
+      max-width: 600px;
+      margin: 2rem auto;
       text-align: center;
+      position: relative;
     }
 
-    .product-image img {
-      max-width: 400px;
-      border-radius: 15px;
+    .viewer-container canvas {
+      max-width: 100%;
+      border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .social-icons a {
-      color: #2c3e50;
-      font-size: 1.5rem;
-      transition: color 0.3s ease;
-    }
-
-    .social-icons a:hover {
-      color: #e74c3c;
     }
 
     footer {
       text-align: center;
       padding: 1rem;
-      background: #2c3e50;
+      background: #0056b3;
       color: white;
     }
 
     footer a {
-      color: #e74c3c;
+      color: #ffcc00;
       text-decoration: none;
     }
   </style>
@@ -131,29 +61,75 @@
 <body>
   <header>
     <h1>Spazzolino Elettrico Premium</h1>
-    <p>Una rivoluzione per la tua igiene orale</p>
+    <p>Visualizza il tuo prodotto in 3D</p>
   </header>
 
-  <section class="product-showcase">
-    <div class="product-details">
-      <h2>Il tuo alleato per un sorriso sano</h2>
-      <p>Progettato con tecnologia avanzata per garantire una pulizia profonda e gengive protette. Un dispositivo indispensabile per la tua igiene orale quotidiana.</p>
-      <p class="price">€17</p>
-      <a href="https://www.paypal.com/cgi-bin/webscr" class="cta-button">Acquista Ora</a>
-    </div>
-    <div class="product-image">
-      <img src="https://m.media-amazon.com/images/I/515KTe1mEzL._AC_SX522_.jpg" alt="Spazzolino Elettrico Premium">
-    </div>
-  </section>
-
-  <div class="social-icons">
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
+  <div class="viewer-container">
+    <canvas id="viewer" width="600" height="400"></canvas>
   </div>
 
   <footer>
-    <p>&copy; 2024 Spazzolino Elettrico Premium. <a href="#">Termini e condizioni</a></p>
+    <p>&copy; 2024 Spazzolino Elettrico Premium. <a href="#">Privacy</a> | <a href="#">Contatti</a></p>
   </footer>
+
+  <!-- Script per Rotazione 360° -->
+  <script>
+    const canvas = document.getElementById('viewer');
+    const ctx = canvas.getContext('2d');
+
+    // Lista delle immagini del prodotto
+    const images = [];
+    for (let i = 1; i <= 36; i++) {
+      const img = new Image();
+      img.src = `images/product_${i}.jpg`; // Assicurati che le immagini siano numerate: product_1.jpg, product_2.jpg, ecc.
+      images.push(img);
+    }
+
+    let currentFrame = 0;
+    let isDragging = false;
+    let startX;
+
+    function drawImage() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const img = images[currentFrame];
+      if (img.complete) {
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      } else {
+        img.onload = () => {
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        };
+      }
+    }
+
+    canvas.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = e.clientX;
+    });
+
+    canvas.addEventListener('mousemove', (e) => {
+      if (isDragging) {
+        const dx = e.clientX - startX;
+        if (dx > 5) {
+          currentFrame = (currentFrame + 1) % images.length;
+          startX = e.clientX;
+        } else if (dx < -5) {
+          currentFrame = (currentFrame - 1 + images.length) % images.length;
+          startX = e.clientX;
+        }
+        drawImage();
+      }
+    });
+
+    canvas.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+
+    canvas.addEventListener('mouseleave', () => {
+      isDragging = false;
+    });
+
+    // Disegna il primo frame all'avvio
+    images[0].onload = drawImage;
+  </script>
 </body>
 </html>
