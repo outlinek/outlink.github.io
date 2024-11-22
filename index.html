@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Acquista lo spazzolino elettrico più avanzato per una pulizia perfetta.">
   <title>Spazzolino Elettrico Premium</title>
-
+  
   <!-- Font e Icone -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -16,49 +16,25 @@
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(to bottom, #1c3a5e, #27496d);
+      background: linear-gradient(135deg, #1d3557, #457b9d);
       color: #fff;
-    }
-
-    /* Sidebar */
-    .sidebar {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 80px;
-      height: 100vh;
-      background: #1a2d48;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      writing-mode: vertical-rl;
-      text-orientation: mixed;
-      font-size: 1rem;
-      font-weight: bold;
-      color: #a8dadc;
-      letter-spacing: 2px;
-      padding: 10px;
-    }
-
-    .sidebar .logo {
-      position: absolute;
-      top: 20px;
-      left: 25px;
-      transform: rotate(90deg);
+      overflow-x: hidden;
     }
 
     /* Navbar */
     .navbar {
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
       align-items: center;
-      padding: 1rem 3rem;
-      gap: 1.5rem;
+      padding: 1rem 2rem;
+      background: transparent;
+      color: white;
     }
 
     .navbar a {
-      color: #fff;
+      color: white;
       text-decoration: none;
+      margin: 0 1rem;
       font-size: 1rem;
       transition: color 0.3s ease;
     }
@@ -67,25 +43,34 @@
       color: #a8dadc;
     }
 
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .navbar .menu {
+      display: flex;
+      align-items: center;
+    }
+
     /* Hero Section */
     .hero {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 3rem 5rem;
+      padding: 3rem 2rem;
       min-height: 100vh;
-      position: relative;
     }
 
     .hero .content {
-      max-width: 500px;
+      max-width: 600px;
+      margin-left: 3rem;
     }
 
     .hero h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
-      color: #fff;
-      font-weight: bold;
+      color: #f1faee;
     }
 
     .hero h2 {
@@ -97,7 +82,7 @@
     .hero p {
       font-size: 1rem;
       margin-bottom: 2rem;
-      color: #d8e3e7;
+      color: #e9ecef;
     }
 
     .hero .price {
@@ -124,47 +109,41 @@
       background: #d62828;
     }
 
-    /* Product Image */
     .hero .product-image {
       flex: 1;
       text-align: center;
     }
 
     .hero .product-image img {
-      max-width: 500px;
-      transform: rotate(-20deg);
-      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+      max-width: 450px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
 
-    /* Color Options */
-    .color-options {
-      display: flex;
-      align-items: center;
-      margin: 1rem 0;
-      gap: 1rem;
-    }
-
-    .color-option {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      cursor: pointer;
-      border: 2px solid #fff;
-    }
-
-    .color-option.blue {
+    /* Sidebar */
+    .sidebar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100px;
       background: #1d3557;
-    }
-
-    .color-option.white {
-      background: #f1faee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #a8dadc;
+      letter-spacing: 2px;
     }
 
     /* Footer */
     footer {
       text-align: center;
       padding: 1rem;
-      background: #1a2d48;
+      background: #1d3557;
       color: white;
     }
 
@@ -176,35 +155,26 @@
 </head>
 <body>
   <!-- Sidebar -->
-  <div class="sidebar">
-    <div class="logo">
-      <i class="fas fa-toothbrush"></i>
-    </div>
-    <div>SPAZZOLINO ELETTRICO</div>
-  </div>
+  <div class="sidebar">SPAZZOLINO PREMIUM</div>
 
   <!-- Navbar -->
   <div class="navbar">
-    <a href="#">Home</a>
-    <a href="#">Prodotti</a>
-    <a href="#">About Us</a>
-    <a href="#">Contatti</a>
-    <i class="fas fa-search"></i>
-    <i class="fas fa-shopping-cart"></i>
-    <i class="fas fa-user-circle"></i>
+    <div class="logo">Spazzolino</div>
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#">Prodotti</a>
+      <a href="#">About Us</a>
+      <a href="#">Contatti</a>
+    </div>
   </div>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="content">
-      <h1>Spazzolino Premium</h1>
-      <h2>Per una pulizia perfetta</h2>
-      <p>Progettato per garantire una pulizia profonda con tecnologia avanzata e un design moderno.</p>
+      <h1>Spazzolino Elettrico Premium</h1>
+      <h2>Per una pulizia profonda e gengive protette</h2>
+      <p>Progettato con tecnologia avanzata, il nostro spazzolino garantisce una pulizia perfetta e denti sani. Scopri il futuro della tua igiene orale.</p>
       <p class="price">€17</p>
-      <div class="color-options">
-        <div class="color-option blue"></div>
-        <div class="color-option white"></div>
-      </div>
       <a href="https://www.paypal.com/cgi-bin/webscr" class="cta-button">Acquista Ora</a>
     </div>
     <div class="product-image">
@@ -214,7 +184,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2024 Spazzolino Elettrico Premium. <a href="#">Privacy</a> | <a href="#">Termini</a></p>
+    <p>&copy; 2024 Spazzolino Elettrico Premium. <a href="#">Privacy</a> | <a href="#">Contatti</a></p>
   </footer>
 </body>
 </html>
